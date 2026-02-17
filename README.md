@@ -1,3 +1,5 @@
+> **Note: This repository has been archived. Future maintenance will continue at [beckoncat/go-athena](https://github.com/beckoncat/go-athena).**
+
 [![](https://godoc.org/github.com/speee/go-athena?status.svg)](https://godoc.org/github.com/speee/go-athena)
 
 **This is forked from [segmentio/go-athena](https://github.com/segmentio/go-athena) and we described what changes we added [here](./doc/introduction.md).**
