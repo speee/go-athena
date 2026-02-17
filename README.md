@@ -1,6 +1,6 @@
 [![](https://godoc.org/github.com/speee/go-athena?status.svg)](https://godoc.org/github.com/speee/go-athena)
 
-**This repository is a fork of [speee/go-athena](https://github.com/speee/go-athena) (itself a fork of [segmentio/go-athena](https://github.com/segmentio/go-athena)). Since speee/go-athena is no longer being maintained, this repository will serve as an independently maintained continuation of the project.**
+**This is forked from [segmentio/go-athena](https://github.com/segmentio/go-athena) and we described what changes we added [here](./doc/introduction.md).**
 
 # go-athena
 
@@ -9,7 +9,7 @@ go-athena is a simple Golang [database/sql] driver for [Amazon Athena](https://a
 ```go
 import (
     "database/sql"
-    _ "github.com/beckoncat/go-athena"
+    _ "github.com/speee/go-athena"
 )
 
 func main() {
@@ -67,9 +67,9 @@ Response time for fetching 1,000,000 records
 |package|response time|
 |--|--|
 |segmentio/go-athena|2m 33.4132205s|
-|beckoncat/go-athena API mode|2m 26.475804292s|
-|beckoncat/go-athena DL mode|20.719727417s|
-|beckoncat/go-athena GZIP mode|17.661648209s|
+|speee/go-athena API mode|2m 26.475804292s|
+|speee/go-athena DL mode|20.719727417s|
+|speee/go-athena GZIP mode|17.661648209s|
 
 Detailed explanation is described [here](doc/result_mode.md#response-time-for-each-mode).
 

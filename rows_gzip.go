@@ -162,8 +162,13 @@ func (r *rowsGzipDL) downloadCompressedData(ctx context.Context, cfg aws.Config,
 }
 
 func (r *rowsGzipDL) getTableAsync(ctx context.Context, errCh chan error) {
+	catalog := r.catalog
+	if catalog == "" {
+		catalog = CATALOG_AWS_DATA_CATALOG
+	}
+
 	data, err := r.athena.GetTableMetadata(ctx, &athena.GetTableMetadataInput{
-		CatalogName:  aws.String(r.catalog),
+		CatalogName:  aws.String(catalog),
 		DatabaseName: aws.String(r.db),
 		TableName:    aws.String(r.ctasTable),
 	})

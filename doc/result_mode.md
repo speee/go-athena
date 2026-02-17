@@ -70,9 +70,9 @@ I think the following trends can be said.
 |package|response time (500000 rows)|response time (1000000 rows)|response time (5000000 rows)|
 |--|--|--|--|
 |segmentio/go-athena|1m 19.8935445s|2m 33.4132205s|12m 36.8392345s|
-|beckoncat/go-athena API mode|1m 18.9925315s|2m 26.475804292s|12m 25.008203542s|
-|beckoncat/go-athena DL mode|12.721702583s|20.719727417s|1m 23.689167708s|
-|beckoncat/go-athena GZIP mode|15.8399715s|17.661648209s|43.873663666s|
+|speee/go-athena API mode|1m 18.9925315s|2m 26.475804292s|12m 25.008203542s|
+|speee/go-athena DL mode|12.721702583s|20.719727417s|1m 23.689167708s|
+|speee/go-athena GZIP mode|15.8399715s|17.661648209s|43.873663666s|
 
 ## Usages
 

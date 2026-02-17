@@ -178,10 +178,22 @@ func (c *conn) dropCTASTable(ctx context.Context, table string) func() error {
 
 // startQuery starts an Athena query and returns its ID.
 func (c *conn) startQuery(ctx context.Context, query string) (string, error) {
+	// resolve catalog from context, fallback to connection-level catalog
+	catalog := c.catalog
+	if cat, ok := getCatalog(ctx); ok {
+		catalog = cat
+	}
+
+	var catalogPtr *string
+	if catalog != "" {
+		catalogPtr = aws.String(catalog)
+	}
+
 	resp, err := c.athena.StartQueryExecution(ctx, &athena.StartQueryExecutionInput{
 		QueryString: aws.String(query),
 		QueryExecutionContext: &types.QueryExecutionContext{
 			Database: aws.String(c.db),
+			Catalog:  catalogPtr,
 		},
 		ResultConfiguration: &types.ResultConfiguration{
 			OutputLocation: aws.String(c.OutputLocation),
