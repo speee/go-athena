@@ -1,4 +1,4 @@
-module github.com/beckoncat/go-athena
+module github.com/speee/go-athena
 
 go 1.18
 
