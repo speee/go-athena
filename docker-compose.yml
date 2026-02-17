@@ -3,7 +3,7 @@ services:
   app:
     build: .
     volumes:
-      - .:/go/src/github.com/speee/go-athena
+      - .:/go/src/github.com/beckoncat/go-athena
       - go-pkg-mod:/go/pkg/mod
       - root-cache:/root/.cache
 volumes:

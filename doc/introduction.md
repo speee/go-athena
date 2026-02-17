@@ -1,6 +1,6 @@
-# Introduction of speee/go-athena
+# Introduction of beckoncat/go-athena
 
-Recently, we released [speee/go-athena](https://github.com/speee/go-athena), and we would like to introduce it here.
+Recently, we released [beckoncat/go-athena](https://github.com/beckoncat/go-athena), and we would like to introduce it here.
 
 ## What is go-athena
 `go-athena` is a Golang [database/sql](https://golang.org/pkg/database/sql/) package driver for AWS Athena.
@@ -10,7 +10,7 @@ You can use it as follows:
 ```go
 import (
     "database/sql"
-    _ "github.com/speee/go-athena"
+    _ "github.com/beckoncat/go-athena"
 )
 
 func main() {
@@ -46,4 +46,4 @@ We can keep maintaining this library and review / merge your PRs :)
 And if the original creator would hope so, we would also be happy to merge our changes into the original repository.
 
 `go-athena` is an awesome package for Golang developers because it's very easy to use Athena via `database/sql` interface.
-`speee/go-athena` has new features as well as solving the previous issues, so we hope that the original creator will also like it.
+`beckoncat/go-athena` has new features as well as solving the previous issues, so we hope that the original creator will also like it.
